@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal WebCode</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">&lt;/&gt; Portal <strong>WebCode</strong></div>
+            <nav>
+                <button id="menuBtn">&#9776;</button>
+                <ul id="menu">
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                    <li><a href="#comparativo">Comparativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="container hero-inner">
+                <div>
+                    <h1>Aprenda a criar sites do zero.</h1>
+                    <p>Conteúdo introdutório sobre HTML, CSS e JavaScript para quem está começando agora.</p>
+                    <a href="#html" class="btn">Começar</a>
+                </div>
+                <pre class="hero-code"><code>&lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+&lt;p&gt;Meu primeiro site.&lt;/p&gt;</code></pre>
+            </div>
+        </section>
+
+        <section id="html" class="container">
+            <h2>HTML</h2>
+            <div class="layout">
+                <div class="conteudo">
+                    <article>
+                        <h3>O que é?</h3>
+                        <p>HTML é a linguagem de marcação que estrutura o conteúdo das páginas web. Tudo que você vê num
+                            site, textos, imagens, botões — começa com HTML.</p>
+                    </article>
+                    <article>
+                        <h3>Tags semânticas</h3>
+                        <p>Desde o HTML5 existem tags que descrevem o papel do conteúdo, não só a aparência. Isso
+                            melhora acessibilidade e SEO.</p>
+                        <ul class="tag-list">
+                            <li><code>&lt;header&gt;</code> — cabeçalho</li>
+                            <li><code>&lt;nav&gt;</code> — navegação</li>
+                            <li><code>&lt;main&gt;</code> — conteúdo principal</li>
+                            <li><code>&lt;section&gt;</code> — seção temática</li>
+                            <li><code>&lt;article&gt;</code> — conteúdo independente</li>
+                            <li><code>&lt;aside&gt;</code> — conteúdo complementar</li>
+                            <li><code>&lt;footer&gt;</code> — rodapé</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Estrutura básica</h3>
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </article>
+                </div>
+                <aside>
+                    <h4>Dica</h4>
+                    <p>No VS Code, digite <code>!</code> e pressione <kbd>Tab</kbd> para gerar a estrutura base do HTML
+                        automaticamente.</p>
+                    <hr>
+                    <h4>Tags essenciais</h4>
+                    <ul>
+                        <li><code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> títulos</li>
+                        <li><code>&lt;p&gt;</code> parágrafo</li>
+                        <li><code>&lt;a&gt;</code> link</li>
+                        <li><code>&lt;img&gt;</code> imagem</li>
+                        <li><code>&lt;ul&gt;</code> lista</li>
+                        <li><code>&lt;form&gt;</code> formulário</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="css" class="container">
+            <h2>CSS</h2>
+            <div class="layout">
+                <div class="conteudo">
+                    <article>
+                        <h3>O que é?</h3>
+                        <p>CSS controla a aparência visual das páginas: cores, fontes, espaçamentos, layouts e
+                            animações. Sem CSS, tudo seria texto puro sem estilo.</p>
+                    </article>
+                    <article>
+                        <h3>Sintaxe</h3>
+                        <pre><code>h1 {
+  color: #f5c518;
+  font-size: 2rem;
+}
+
+.destaque {
+  background: #1e3a5f;
+  padding: 10px;
+  border-radius: 5px;
+}</code></pre>
+                    </article>
+                    <article>
+                        <h3>Flexbox e Grid</h3>
+                        <p>São os sistemas modernos de layout do CSS. Substituem técnicas antigas e permitem criar
+                            designs responsivos com muito menos código.</p>
+                        <pre><code>/* Flexbox */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Grid */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}</code></pre>
+                    </article>
+                    <article>
+                        <h3>Media Queries</h3>
+                        <p>Permitem aplicar estilos diferentes conforme o tamanho da tela, tornando o site responsivo.
+                        </p>
+                        <pre><code>@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+}</code></pre>
+                    </article>
+                </div>
+                <aside>
+                    <h4>Box Model</h4>
+                    <p>Todo elemento é uma caixa com camadas:</p>
+                    <div class="box-demo">
+                        <div class="bm-margin">margin
+                            <div class="bm-border">border
+                                <div class="bm-padding">padding
+                                    <div class="bm-content">conteúdo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Unidades</h4>
+                    <ul>
+                        <li><code>px</code> pixels fixos</li>
+                        <li><code>%</code> relativo ao pai</li>
+                        <li><code>rem</code> relativo ao root</li>
+                        <li><code>vw/vh</code> viewport</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="javascript" class="container">
+            <h2>JavaScript</h2>
+            <div class="layout">
+                <div class="conteudo">
+                    <article>
+                        <h3>O que é?</h3>
+                        <p>JavaScript é a única linguagem de programação nativa do navegador. Com ela você adiciona
+                            interatividade: validações, animações, consumo de APIs e manipulação da página em tempo
+                            real.</p>
+                    </article>
+                    <article>
+                        <h3>Variáveis e funções</h3>
+                        <pre><code>let nome = "Ana";
+const idade = 20;
+
+function saudacao(nome) {
+  return `Olá, ${nome}!`;
+}
+
+// Arrow function
+const dobrar = n => n * 2;</code></pre>
+                    </article>
+                    <article>
+                        <h3>DOM e eventos</h3>
+                        <p>O DOM representa a página como uma árvore de objetos. O JavaScript pode ler e alterar
+                            qualquer elemento.</p>
+                        <pre><code>const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+  document.querySelector("h1").textContent = "Clicado!";
+});</code></pre>
+                    </article>
+                    <article>
+                        <h3>Teste aqui</h3>
+                        <div class="demo">
+                            <input type="text" id="nomeInput" placeholder="Digite seu nome" />
+                            <button id="btnDemo">Gerar saudação</button>
+                            <p id="resultado"></p>
+                        </div>
+                    </article>
+                </div>
+                <aside>
+                    <h4>Onde colocar?</h4>
+                    <p>Coloque o <code>&lt;script&gt;</code> antes do <code>&lt;/body&gt;</code> para o HTML carregar
+                        primeiro.</p>
+                    <hr>
+                    <h4>Conceitos chave</h4>
+                    <ul>
+                        <li>Variáveis</li>
+                        <li>Condicionais</li>
+                        <li>Laços</li>
+                        <li>Funções</li>
+                        <li>Arrays e Objetos</li>
+                        <li>DOM e Eventos</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="comparativo" class="container">
+            <h2>Comparativo</h2>
+            <div class="cards-trio">
+                <article class="card card-html">
+                    <h3>HTML</h3>
+                    <p>Estrutura o conteúdo. O esqueleto do site.</p>
+                    <span class="badge">Marcação</span>
+                </article>
+                <article class="card card-css">
+                    <h3>CSS</h3>
+                    <p>Define a aparência. A roupa do site.</p>
+                    <span class="badge">Estilo</span>
+                </article>
+                <article class="card card-js">
+                    <h3>JavaScript</h3>
+                    <p>Adiciona comportamento. O cérebro do site.</p>
+                    <span class="badge">Programação</span>
+                </article>
+            </div>
+            <div class="tabela-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>JavaScript</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Função</td>
+                            <td>Estrutura</td>
+                            <td>Estilo</td>
+                            <td>Interatividade</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo</td>
+                            <td>Marcação</td>
+                            <td>Folha de estilos</td>
+                            <td>Programação</td>
+                        </tr>
+                        <tr>
+                            <td>Extensão</td>
+                            <td><code>.html</code></td>
+                            <td><code>.css</code></td>
+                            <td><code>.js</code></td>
+                        </tr>
+                        <tr>
+                            <td>Obrigatório?</td>
+                            <td>Sim</td>
+                            <td>Recomendado</td>
+                            <td>Opcional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p class="logo">&lt;/&gt; Portal <strong>WebCode</strong></p>
+                <p>Educação em tecnologia para todos.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                    <li><a href="#comparativo">Comparativo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="footer-copy">&copy; 2026 Portal WebCode</p>
+    </footer>
+
+    <script>
+        document.getElementById("menuBtn").addEventListener("click", () => {
+            document.getElementById("menu").classList.toggle("aberto");
+        });
+
+        document.getElementById("btnDemo").addEventListener("click", () => {
+            const nome = document.getElementById("nomeInput").value.trim();
+            const out = document.getElementById("resultado");
+            out.textContent = nome ? `Olá, ${nome}! Bem-vindo ao WebCode ` : "Digite seu nome primeiro!";
+            out.style.color = nome ? "#4caf50" : "#e74c3c";
+        });
+    </script>
+
+</body>
+
+</html>
