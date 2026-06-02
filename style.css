@@ -354,7 +354,6 @@ aside kbd {
     min-height: 1.4rem;
 }
 
-/* === COMPARATIVO === */
 .cards-trio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
